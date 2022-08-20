@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-container {
+    display: grid;
+    align-items: center;
+    background-color: aliceblue;
+    height: 100vh;
+}
+
+.container {
+    color: white;
+    display: grid;
+    grid-template-areas: " div1 div1 div2 div3 "
+                         " div4 div5 div5 div3";
+    gap: 30px;
+    max-width: 1800px;
+    justify-content: center;
+}
+
+.div1 {
+    background-color: blueviolet;
+    height: 350px;
+    grid-area: div1;
+    border-radius: 10px;
+    width: 600px;
+}
+
+.div2 {
+    background-color: rgb(54, 73, 90);
+    height: 350px;
+    grid-area: div2;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.div3 {
+    background-color: white;
+    height: 730px;
+    grid-area: div3;
+    border-radius: 10px;
+    color: black;
+    width: 300px;
+}
+
+.div4 {
+    background-color: white;
+    height: 350px;
+    grid-area: div4;
+    border-radius: 10px;
+    color: black;
+    width: 300px;
+}
+
+.div5 {
+    background-color: rgb(32, 33, 39);
+    height: 350px;
+    grid-area: div5;
+    border-radius: 10px;
+}
+
+.all {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.146);
+}
+
+.foto {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border-radius: 50%;
+    margin: 30px;
+    overflow: hidden;
+}
+
+.div-name {
+    margin-top: 40px;
+}
+
+.sub-name {
+    opacity: 0.5;
+}
+
+.div-top {
+    display: flex;
+}
+
+.div-text {
+    max-width: 600px;
+    padding: 0 30px;
+}
+
+.primary-text {
+    font-size: 20px;
+}
+
+.second-text {
+    font-size: 15px;
+    opacity: 0.5;
+    margin-top: 20px;
+}
+
+.all:hover {
+    transform: scale(1.1);
+    transition: .8s;
+}
+
+@media (max-width: 1260px) {
+
+    .main-container {
+        height: 100%;
+    }
+
+    .container {
+        grid-template-areas: " div1 div1 "
+                             " div2 div4 "
+                             " div3 div3 "
+                             " div5 div5"
+    }
+
+    .div1 {
+        width: 630px;
+    }
+
+    .div3 {
+        height: 400px;
+        width: 630px;
+    }
+
+}
+
+@media (max-width: 650px) {
+    .container {
+        grid-template-areas: " div1 "
+                             " div2 "
+                             " div3 "
+                             " div4 "
+                             " div5 "
+    }
+
+    .div1 {
+        width: 300px;
+        height: 650px;
+    }
+
+    .div3 {
+        width: 300px;
+        height: 750px;
+    }
+
+    .div5 {
+        width: 300px;
+        height: 600px;
+    }
+}
