@@ -24,7 +24,6 @@
 
 .div1 {
     background-color: blueviolet;
-    height: 350px;
     grid-area: div1;
     border-radius: 10px;
     width: 600px;
@@ -32,7 +31,6 @@
 
 .div2 {
     background-color: rgb(54, 73, 90);
-    height: 350px;
     grid-area: div2;
     border-radius: 10px;
     width: 300px;
@@ -40,7 +38,6 @@
 
 .div3 {
     background-color: white;
-    height: 730px;
     grid-area: div3;
     border-radius: 10px;
     color: black;
@@ -49,7 +46,6 @@
 
 .div4 {
     background-color: white;
-    height: 350px;
     grid-area: div4;
     border-radius: 10px;
     color: black;
@@ -58,13 +54,14 @@
 
 .div5 {
     background-color: rgb(32, 33, 39);
-    height: 350px;
     grid-area: div5;
     border-radius: 10px;
 }
 
 .all {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.146);
+    height: inherit !important;
+    padding-bottom: 20px;
 }
 
 .foto {
@@ -115,10 +112,12 @@
     }
 
     .container {
-        grid-template-areas: " div1 div1 "
+        grid-template-areas: " .    .    "
+                             " div1 div1 "
                              " div2 div4 "
                              " div3 div3 "
-                             " div5 div5"
+                             " div5 div5 "
+                             " .    .    "
     }
 
     .div1 {
@@ -129,30 +128,38 @@
         height: 400px;
         width: 630px;
     }
+    .all {
+        height: inherit !important;
+        padding-bottom: 20px;
+    }
 
 }
 
 @media (max-width: 650px) {
     .container {
-        grid-template-areas: " div1 "
+        grid-template-areas: " . "
+                             " div1 "
                              " div2 "
                              " div3 "
                              " div4 "
                              " div5 "
+                             " .    "
     }
 
     .div1 {
         width: 300px;
-        height: 650px;
     }
 
     .div3 {
         width: 300px;
-        height: 750px;
     }
 
     .div5 {
         width: 300px;
-        height: 600px;
+    }
+
+    .all {
+        height: inherit !important;
+        padding-bottom: 20px;
     }
 }
